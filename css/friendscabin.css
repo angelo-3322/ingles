@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fff3e0, #ffe0b2);
+    color: #333;
+  }
+  
+  header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  header iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border: none;
+    object-fit: cover;
+  }
+  
+  header .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 20px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 60px 5%;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 123, 0, 0.4);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card .text {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #ff7b00;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff7b00;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #e96e00;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+      padding: 15px 25px;
+    }
+  
+    .container {
+      padding: 40px 4%;
+    }
+  
+    .card img {
+      height: 180px;
+    }
+  
+    .card h2 {
+      font-size: 1.3rem;
+    }
+  
+    .card p {
+      font-size: 0.95rem;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+      padding: 10px 20px;
+    }
+  
+    .card img {
+      height: 160px;
+    }
+  
+    .card h2 {
+      font-size: 1.2rem;
+    }
+  
+    .card p {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh; /* 100 * (16/9) */
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  

@@ -1,0 +1,121 @@
+:root {
+    --main-color: #d87c5a;
+    --bg: #fff9f3;
+    --text: #333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius: 20px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  .header {
+    position: relative;
+    height: 65vh;
+    background: url('https://img.freepik.com/foto-gratis/cabana-troncos-rustica-ubicada-bosque-tranquilo-generada-ia_188544-32705.jpg?t=st=1744842171~exp=1744845771~hmac=a25dded41867552314cfbbb840fae297043346ab71d668a44201813ee59c21cd&w=1060') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+  
+  .header-content {
+    position: relative;
+    color: var(--white);
+    padding: 2rem;
+  }
+  
+  .header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 4rem 6%;
+  }
+  
+  .card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 25px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(216, 124, 90, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    padding: 1.5rem;
+  }
+  
+  .card-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.7rem;
+  }
+  
+  .card-text p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .footer {
+    background-color: #2e2e2e;
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .back-link {
+    color: var(--main-color);
+    text-decoration: none;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animación */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

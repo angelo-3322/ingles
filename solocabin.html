@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solo Cabins – Mountain Retreat</title>
+  <link rel="stylesheet" href="css/solocabins.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>Solo Cabins</h1>
+      <p>A perfect space for your personal retreat in the mountains.</p>
+    </div>
+  </header>
+
+  <main class="details">
+    <div class="card">
+      <img src="https://img.freepik.com/foto-gratis/full-shot-hombre-trabajando-computadora-portatil_52683-88089.jpg?t=st=1744842366~exp=1744845966~hmac=1e39991243d0408428fb1c99e90cb07c460d755a62003cfeb7a063f5b5e08a96&w=996" alt="Cabin interior">
+      <div class="card-text">
+        <h2>Personal Space</h2>
+        <p>Minimalist design with a single bed, desk, and mountain views.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.freepik.com/fotos-premium/interior-bano_1048944-16870279.jpg?w=996" alt="Private bathroom">
+      <div class="card-text">
+        <h2>Private Bathroom</h2>
+        <p>Elegant and functional with a rainfall shower, soft towels, and wooden details.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.freepik.com/fotos-premium/retrato-joven-pie-gimnasio_1048944-11226063.jpg?w=740" alt="Compact kitchen">
+      <div class="card-text">
+        <h2>Compact Kitchen</h2>
+        <p>Everything you need to prepare your favorite meals, including freshly brewed coffee.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Solo Cabins – Mountain Retreat</p>
+    <a href="cabins.html" class="back-link">← Back to homepage</a>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      Swal.fire({
+        title: '🎉 Special Offer Just for You!',
+        text: 'Enjoy 50% off on solo cabins for a limited time!',
+        icon: 'success',
+        confirmButtonText: 'Exit',
+        background: '#fff9f3',  // Soft and pleasant background
+        confirmButtonColor: '#d87c5a',  // Warm color for the button
+        color: '#333',  // Text color
+        padding: '2em',  // Some space around the content
+        customClass: {
+          popup: 'animated fadeInDown faster',  // Smooth animation
+          title: 'popup-title',  // Custom style for the title
+          confirmButton: 'popup-btn',  // Custom style for the button
+        },
+        backdrop: `rgba(0, 0, 0, 0.3)`,  // Dark background with opacity
+        backdropOpacity: 0.5,  // Background opacity
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Just close the SweetAlert when the user clicks "Exit"
+          Swal.close();
+        }
+      });
+    });
+  </script>
+
+  <style>
+    /* Custom styles for SweetAlert */
+    .swal2-popup {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      font-family: 'Roboto', sans-serif;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+
+    /* Title style */
+    .swal2-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Main text style */
+    .swal2-html-container {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    /* Button style */
+    .swal2-button {
+      padding: 14px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s ease-in-out;
+    }
+
+    .swal2-button:hover {
+      background-color: #ff5a4d;
+      transform: scale(1.05);
+    }
+  </style>
+</body>
+</html>

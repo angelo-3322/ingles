@@ -1,0 +1,37 @@
+<style>
+  .booking {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .book-now {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+  }
+
+  .book-now:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Stay</title>
+  <link rel="stylesheet" href="css/book.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Stay</h1>
+    <form id="bookingForm" action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="checkin">Check-In Date</label>
+      <input type="date" id="checkin" name="checkin" required />
+
+      <label for="checkout">Check-Out Date</label>
+      <input type="date" id="checkout" name="checkout" required />
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" name="guests" required>
+        <option value="" disabled selected>Select</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5+">5+ Guests</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+
+    <a href="cabins.html" class="back-link">← Back to Homepage</a>
+  </div>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevents the form from being submitted
+  
+      Swal.fire({
+        title: 'Booking Successful!',
+        text: 'Your reservation has been registered. Thank you for choosing us!',
+        icon: 'success',
+        confirmButtonColor: '#4CAF50',
+        confirmButtonText: 'Back to the homepage'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'cabins.html'; // Redirects to the homepage
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

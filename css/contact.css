@@ -1,0 +1,156 @@
+/* ===== Estilos generales del body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/fotos-premium/iconos-creativos-redes-sociales-sobre-fondo-azul-como-tecnologia-red-concepto-comunicacion-3d-rendering_670147-18860.jpg?w=996') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Filtro oscuro para mejorar legibilidad sobre la imagen de fondo */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* ===== Contenedor principal ===== */
+.contact-container {
+    max-width: 650px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Animación de entrada ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Título principal ===== */
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+/* ===== Información de contacto ===== */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* ===== Formulario de contacto ===== */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ===== Botón ===== */
+.contact-form button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+/* ===== Redes Sociales ===== */
+.social-links {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 14px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 42px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}

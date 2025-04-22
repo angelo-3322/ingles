@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Innoprint</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <section class="contact-container">
+        <h1>Contact Us</h1>
+    
+        <div class="contact-info">
+            <p><strong>📍 Address:</strong> Monteverde Cloud Forest Biological Reserve, Monteverde, Puntarenas, Costa Rica</p>
+            <p><strong>📞 Phone:</strong> (+506) 2222 3333</p>
+            <p><strong>✉️ Email:</strong> <a href="mailto:contact@innoprint.cr" style="color: #007bff; text-decoration: none;">contact@innoprint.cr</a></p>
+        </div>
+    
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="email" placeholder="Email Address" name="email" required>
+            <input type="tel" placeholder="Phone Number" name="phone" required>
+            <textarea placeholder="Write your message here..." rows="5" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    
+        <div class="social-links">
+            <a href="#" class="social-icon" title="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+            </a>
+        </div>
+    </section>
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Previene recarga de la página
+    
+            Swal.fire({
+                title: "Thank you!",
+                text: "Your message has been sent successfully. We'll contact you shortly.",
+                icon: "success",
+                confirmButtonText: "Great!",
+                background: "#f0f9ff",
+                color: "#333",
+                confirmButtonColor: "#007bff",
+                padding: "2em",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("https://sweetalert2.github.io/images/nyan-cat.gif")
+                    left top
+                    no-repeat
+                `
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'cabins.html'; // Cambia esto según tu ruta
+                }
+            });
+    
+        });
+    </script>
+    
+    
+</body>
+</html>
